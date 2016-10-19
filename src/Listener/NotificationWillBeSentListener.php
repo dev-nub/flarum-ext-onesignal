@@ -1,5 +1,5 @@
 <?php
-namespace Flarum\OneSignal\Listener;
+namespace Zurtr\OneSignal\Listener;
 
 
 class NotificationWillBeSentListener

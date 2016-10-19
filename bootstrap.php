@@ -3,11 +3,17 @@
 /**
  * @author Vivex <contact@viveksoni.net>
  */
-use Flarum\OneSignal\Listener;
+namespace Zurtr\OneSignal;
+
+
 
 use Illuminate\Contracts\Events\Dispatcher;
+use Zurtr\OneSignal\Listener\AddClientAssets;
+use Zurtr\OneSignal\Listener\AddManifestRoute;
+use Zurtr\OneSignal\Listener\NotificationWillBeSentListener;
 
 return function (Dispatcher $events) {
-  $events->subscribe(Listener\AddClientAssets::class);
-  $events->subscribe(Listener\FilterNewPosts::class);
+    $events->subscribe(AddClientAssets::class);
+    //$events->subscribe(NotificationWillBeSentListener::class);
+    $events->subscribe(AddManifestRoute::class);
 };

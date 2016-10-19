@@ -1,13 +1,13 @@
 {
-    "name": "Zurtr/flarum-ext-onesignal",
+    "name": "zurtr/flarum-ext-onesignal",
     "description": "Adds Web Push notification feature to flarum",
     "type": "flarum-extension",
     "require": {
         "flarum/core": "^0.1.0-beta.3"
     },
-    "extra": {
-        "flarum-extension": {
-            "title": "Hello World"
+    "autoload": {
+        "psr-4": {
+            "Zurtr\\OneSignal\\": "src/"
         }
     },
     "license": "MIT",
@@ -16,5 +16,15 @@
             "name": "Vivek Soni",
             "email": "contact@viveksoni.net"
         }
-    ]
+    ],
+    "extra": {
+        "flarum-extension": {
+            "title": "OneSignal",
+            "icon": {
+                "name": "tags",
+                "backgroundColor": "#F28326",
+                "color": "#fff"
+            }
+        }
+    }
 }

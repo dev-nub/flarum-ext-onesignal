@@ -1,5 +1,5 @@
 {
-    "name": "vivek/flarum-ext-onesignal",
+    "name": "Zurtr/flarum-ext-onesignal",
     "description": "Adds Web Push notification feature to flarum",
     "type": "flarum-extension",
     "require": {

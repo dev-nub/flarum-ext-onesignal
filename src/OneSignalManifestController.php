@@ -1,9 +1,9 @@
 <?php
 namespace Zurtr\OneSignal;
 
-use Flarum\Forum\Controller\ClientController;
+use Flarum\Forum\Controller\WebAppController;
 
-class OneSignalManifestController extends  ClientController
+class OneSignalManifestController extends  WebAppController
 {
 
 }

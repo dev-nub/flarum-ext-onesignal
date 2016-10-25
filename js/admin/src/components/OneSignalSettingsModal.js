@@ -17,6 +17,10 @@ export default class OneSignalSettingsModal extends SettingsModal {
             <div className="form-group">
                 <label>OneSignal AppID: </label>
                 <input className="FormControl" bidi={this.setting('zurtr-onesignal.one_signal_app_id')}/>
+            </div>,
+            <div className="form-group">
+                <label>Subdomain (if not https): </label>
+                <input className="FormControl" bidi={this.setting('zurtr-onesignal.onesignal_subdomain')}/>
             </div>
     ];
     }

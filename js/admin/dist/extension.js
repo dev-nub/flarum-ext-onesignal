@@ -42,6 +42,15 @@ System.register('zurtr/onesignal/components/OneSignalSettingsModal', ['flarum/co
                                 'OneSignal AppID: '
                             ),
                             m('input', { className: 'FormControl', bidi: this.setting('zurtr-onesignal.one_signal_app_id') })
+                        ), m(
+                            'div',
+                            { className: 'form-group' },
+                            m(
+                                'label',
+                                null,
+                                'Subdomain (if not https): '
+                            ),
+                            m('input', { className: 'FormControl', bidi: this.setting('zurtr-onesignal.onesignal_subdomain') })
                         )];
                     }
                 }]);

@@ -28,7 +28,7 @@ class AddHeadData
     {
 
         if ($event->isForum()) {
-            $event->view->addHeadString('<link rel=\"manifest\" href=\"/manifest.json\">');
+            $event->view->addHeadString('<link rel="manifest" href="/manifest.json">');
         }
     }
 

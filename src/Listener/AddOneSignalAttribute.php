@@ -2,6 +2,7 @@
 
 namespace Zurtr\OneSignal\Listener;
 
+use Flarum\Api\Serializer\UserSerializer;
 use Flarum\Event\PrepareApiAttributes;
 use Flarum\Settings\SettingsRepositoryInterface;
 use Illuminate\Contracts\Events\Dispatcher;
@@ -20,7 +21,7 @@ class AddOneSignalAttribute
 
     public function subscribe(Dispatcher $events)
     {
-        $events->listen(AddOneSignalAttribute::class, [$this, 'addAttributes']);
+        $events->listen(PrepareApiAttributes::class, [$this, 'addAttributes']);
     }
 
     public function addAttributes(PrepareApiAttributes $event)
@@ -28,5 +29,8 @@ class AddOneSignalAttribute
 
         $event->attributes['zurtr_onesignal_app_id'] = $this->settings->get('zurtr-onesignal.one_signal_app_id');
         $event->attributes['zurtr_onesignal_subdomain'] = $this->settings->get('zurtr-onesignal.onesignal_subdomain');
+        if ($event->isSerializer(UserSerializer::class)) {
+            $event->attributes['one_signal_user_id'] = $event->model->one_signal_user_id;
+        }
     }
 }

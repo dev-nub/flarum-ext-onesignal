@@ -13,6 +13,7 @@ use Zurtr\OneSignal\Listener\AddHeadData;
 use Zurtr\OneSignal\Listener\AddManifestRoute;
 use Zurtr\OneSignal\Listener\AddOneSignalAttribute;
 use Zurtr\OneSignal\Listener\NotificationWillBeSentListener;
+use Zurtr\OneSignal\Listener\WhileUserUpdate;
 
 return function (Dispatcher $events) {
     $events->subscribe(AddClientAssets::class);
@@ -20,4 +21,5 @@ return function (Dispatcher $events) {
     $events->subscribe(AddManifestRoute::class);
     $events->subscribe(AddHeadData::class);
     $events->subscribe(AddOneSignalAttribute::class);
+    $events->subscribe(WhileUserUpdate::class);
 };

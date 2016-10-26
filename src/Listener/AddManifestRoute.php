@@ -10,6 +10,8 @@
 namespace Zurtr\OneSignal\Listener;
 use Flarum\Event\ConfigureForumRoutes;
 use Illuminate\Contracts\Events\Dispatcher;
+use Zurtr\OneSignal\OneSignalUserIdController;
+
 class AddManifestRoute
 {
     /**
@@ -25,5 +27,6 @@ class AddManifestRoute
     public function configureForumRoutes(ConfigureForumRoutes $event)
     {
         $event->get('/manifest.json', 'zurtr.onesignal', 'Zurtr\OneSignal\OneSignalManifestController');
+        $event->post('/onesignal', 'zurtr.onesignal.post', OneSignalUserIdController::class);
     }
 }

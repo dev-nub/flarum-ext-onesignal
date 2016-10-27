@@ -48,6 +48,15 @@ System.register('zurtr/onesignal/components/OneSignalSettingsModal', ['flarum/co
                             m(
                                 'label',
                                 null,
+                                'API Key: '
+                            ),
+                            m('input', { className: 'FormControl', bidi: this.setting('zurtr-onesignal.one_signal_api_key') })
+                        ), m(
+                            'div',
+                            { className: 'form-group' },
+                            m(
+                                'label',
+                                null,
                                 'Subdomain (if not https): '
                             ),
                             m('input', { className: 'FormControl', bidi: this.setting('zurtr-onesignal.onesignal_subdomain') })

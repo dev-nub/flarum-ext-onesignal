@@ -21,8 +21,8 @@
         "flarum-extension": {
             "title": "OneSignal",
             "icon": {
-                "name": "tags",
-                "backgroundColor": "#F28326",
+                "name": "bell",
+                "backgroundColor": "#469c9e",
                 "color": "#fff"
             }
         }

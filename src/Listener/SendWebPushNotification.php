@@ -18,7 +18,8 @@ class SendWebPushNotification
 	{
 		$this->settings = $settings;
 		$this->applicationBaseURL = $application->config('url');
-		$this->oneSignalAPI = new OneSignalAPI($this->settings->get('zurtr-onesignal.one_signal_app_id'));
+		$this->oneSignalAPI = new OneSignalAPI($this->settings->get('zurtr-onesignal.one_signal_app_id'),
+						      $this->settings->get('zurtr-onesignal.one_signal_api_key'));
 	}
 
 
